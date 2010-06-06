@@ -1,4 +1,6 @@
-<% form_for @project do |f| %>
+<%= javascript('jquery', 'nested_form') -%>
+
+<% nested_form_for @project do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />
@@ -8,5 +10,14 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
+
+  <p>
+    <%= render :partial => "/shared/location_fields", :locals => {:f => f, :association => :investment_locations, :label => 'Investment location:'} -%>
+  </p>
+
+  <p>
+    <%= render :partial => "/shared/location_fields", :locals => {:f => f, :association => :business_locations, :label => 'Business location:'} -%>
+  </p>
+      
   <p><%= f.submit %></p>
 <% end %>

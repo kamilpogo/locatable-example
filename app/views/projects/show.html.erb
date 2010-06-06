@@ -10,6 +10,20 @@
 </p>
 
 <p>
+  Investment locations:<br />
+  <% @project.investment_locations.each do |il| -%>
+    <%= I18n.t(il.location, :scope => 'countries') -%><br />
+  <% end -%>
+</p>
+
+<p>
+  Business locations:<br />
+  <% @project.business_locations.each do |bl| -%>
+    <%= I18n.t(bl.location, :scope => 'countries') -%><br />
+  <% end -%>
+</p>
+
+<p>
   <%= link_to "Edit", edit_project_path(@project) %> |
   <%= link_to "Destroy", @project, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", projects_path %>

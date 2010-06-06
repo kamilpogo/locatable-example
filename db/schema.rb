@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100606112957) do
+ActiveRecord::Schema.define(:version => 20100606114417) do
+
+  create_table "locations", :force => true do |t|
+    t.string   "location"
+    t.integer  "locatable_id"
+    t.string   "locatable_type"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "name"

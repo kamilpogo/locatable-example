@@ -1,0 +1,2 @@
+class BusinessLocation < Location
+end

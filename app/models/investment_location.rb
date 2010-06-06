@@ -1,0 +1,2 @@
+class InvestmentLocation < Location
+end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  location: MyString
+  locatable_id: 1
+  locatable_type: MyString
+  type: MyString
+
+two:
+  location: MyString
+  locatable_id: 1
+  locatable_type: MyString
+  type: MyString

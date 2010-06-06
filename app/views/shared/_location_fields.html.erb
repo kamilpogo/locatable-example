@@ -1,0 +1,8 @@
+<%= f.label association, label -%>
+
+<% f.fields_for association do |p_location_form| -%>
+  <%= p_location_form.localized_country_select(:location, nil, :include_blank => 'Select one...') %>
+  <%= p_location_form.link_to_remove "Remove" %>
+<% end -%>
+
+<div><%= f.link_to_add "Add Location", association %></div>
